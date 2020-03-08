@@ -1,0 +1,82 @@
+%Diplomarbeit von
+%Lukas Heiligenbrunner
+%Simon Keller
+
+\documentclass[12pt,a4paper,oneside,dvipsnames]{article}
+
+\usepackage[utf8]{inputenc}                   % input kodierung der tex files angeben
+\usepackage[T1]{fontenc} %ausgabefont kodierung festlegen
+\usepackage{lmodern} %package mit latin1 font
+\usepackage[german]{babel}                    % Deutsche Titel Inhaltsverzeichnis etc
+
+\usepackage{amsmath} %ois wos mid mathe und formeln zum doa hod
+\usepackage{amsfonts} %mathe fonts
+\usepackage{amsthm} % Theoreme
+\usepackage{amscd}  % kommutative Diagramme
+
+\usepackage{tikz} % skizzen erstelln
+\usetikzlibrary{shapes,arrows}
+
+\usepackage[autostyle=true,german=quotes]{csquotes} % fuer anfuegungszeichen
+
+\usepackage[breakable,listings,theorems,skins]{tcolorbox} % fancy color boxen erstellen breakable zum ueber mehrere seitn geh u. listings fuer code highlighting
+
+\usepackage[dvipsnames]{xcolor} %more color options -> dvipsnames fuer namen der farben
+
+\usepackage{graphicx} % instert pictures to latex
+\usepackage{caption} %fia bild captions
+\usepackage{subcaption} %fia subfigures
+
+\usepackage{floatflt} % float pictures to left side in text
+\usepackage{epsfig} % todo schaun ob mas braucht
+
+\usepackage[verbose]{placeins} % barieren für floats setzen
+\usepackage{boxedminipage2e} %nützlich zum nemanond doa vo büda
+\usepackage[pdfborderstyle={/S/U/W 1},pdftex,
+pdfauthor={Lukas Heiligenbrunner/Simon Keller},
+pdftitle={Bildkorrektur für Oberflächeninspektion},
+pdfsubject={Diplomarbeit},
+pdfproducer={Latex kompiler},
+pdfcreator={pdflatex, or other tool}]{hyperref} %insert links to sections and footnotes
+
+\usepackage[printonlyused]{acronym}
+
+\usepackage[margin=0.6in,head=14.5pt]{geometry} %papierrand setzen
+
+\usepackage{scrlayer-scrpage} % für individuelle fußzeile benötigt
+
+\usepackage[explicit]{titlesec} %titelbearbeitung
+\usepackage{wrapfig}
+
+\usepackage{pdflscape} % umgedrehte seiten einfuegen
+\usepackage{longtable}
+\usepackage{csvsimple} %csv tabellen einlesen
+
+\usepackage[backend=biber, sorting=none]{biblatex}
+
+
+\addbibresource{literaturverzeichnis.bib}
+%pfad zu bildern setzen
+\graphicspath{{./rsc/}}
+
+
+%setzen der Fuß und Kopfzeilen
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\newcommand{\defaultfooter}{\ifoot{Lukas Heiligenbrunner / Simon Keller}}
+\newcommand{\lukasfooter}{\ifoot{Lukas Heiligenbrunner}}
+\newcommand{\simonfooter}{\ifoot{Simon Keller}}
+\defaultfooter
+\cfoot{}
+\ofoot{\pagemark}
+
+\newcommand{\cv}{OpenCV }
+\newcounter{romannumberingsave} %brauch ma zum speichan von de römischen seiten (damitmas am schluss weidaführn kinnan)
+
+
+
+% -----   DOKUMENT START ------ %
+\begin{document}
+teest
+
+\end{document}
