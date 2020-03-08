@@ -20,11 +20,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build Latex
         run: |
-          cd $GITHUB_WORKSPACE
-          sudo pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf -output-directory=/root  main.tex
-          sudo chmod 777 /root/main.pdf
+          sudo pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf  $GITHUB_WORKSPACE/main.tex
       - name: Show build files
-        run: sudo ls -la /root
+        run: sudo ls -la
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -42,6 +40,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: /root/main.pdf
+          asset_path: ./main.pdf
           asset_name: Tepdfst. 
           asset_content_type: application/zip
