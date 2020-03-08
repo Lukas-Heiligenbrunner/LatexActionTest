@@ -21,8 +21,6 @@
 
 \usepackage[breakable,listings,theorems,skins]{tcolorbox} % fancy color boxen erstellen breakable zum ueber mehrere seitn geh u. listings fuer code highlighting
 
-\usepackage[dvipsnames]{xcolor} %more color options -> dvipsnames fuer namen der farben
-
 \usepackage{graphicx} % instert pictures to latex
 \usepackage{caption} %fia bild captions
 \usepackage{subcaption} %fia subfigures
@@ -55,10 +53,6 @@ pdfcreator={pdflatex, or other tool}]{hyperref} %insert links to sections and fo
 \usepackage[backend=biber, sorting=none]{biblatex}
 
 
-%pfad zu bildern setzen
-\graphicspath{{./rsc/}}
-
-
 %setzen der Fuß und Kopfzeilen
 \pagestyle{scrheadings}
 \clearscrheadfoot
@@ -77,5 +71,5 @@ pdfcreator={pdflatex, or other tool}]{hyperref} %insert links to sections and fo
 % -----   DOKUMENT START ------ %
 \begin{document}
 teest
-
+\input{sec.tex}
 \end{document}
