@@ -24,10 +24,6 @@ jobs:
           sudo pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf -output-directory=/root  main.tex
       - name: Show build files
         run: sudo ls -la /root
-      
-      - name: Build project # This would actually build your project, using zip for an example artifact
-        run: |
-          zip --junk-paths my-artifact README.md
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
