@@ -22,6 +22,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           sudo pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf -output-directory=/root  main.tex
+          sudo chmod 777 /root/main.pdf
       - name: Show build files
         run: sudo ls -la /root
       - name: Create Release
