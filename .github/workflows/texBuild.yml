@@ -25,14 +25,12 @@ jobs:
     # Runs a single command using the runners shell
     - name: Install dependencies
       run: |
-        sudo -i
-        apt update
-        apt install texlive-base texlive-lang-german texlive-latex-extra texlive-bibtex-extra
+        sudo apt update
+        sudo apt install texlive-base texlive-lang-german texlive-latex-extra texlive-bibtex-extra
 
     # Runs a set of commands using the runners shell
     - name: Build Latex
       run: |
-        sudo -i
         cd $GITHUB_WORKSPACE
         sudo pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf -output-directory=/root  main.tex
     - name: Show build files
