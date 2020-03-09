@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install curl
-          id = curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/tags/latest-build' | grep "id" | head -n 1 | cut -c9-16
+          id = ${curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/Lukas-Heiligenbrunner/Diplomarbeit/releases/tags/latest-build' | grep "id" | head -n 1 | cut -c9-16}
           echo id is $id
       - name: Install dependencies
         run: |
