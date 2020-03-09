@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/assets/latest-build'
+          upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/24358211/assets'
           asset_path: ./main.pdf
           asset_name: Diplomarbeit.pdf
           asset_content_type: application/pdf
