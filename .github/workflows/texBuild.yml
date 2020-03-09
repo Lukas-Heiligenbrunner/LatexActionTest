@@ -31,13 +31,18 @@ jobs:
       - name: Check built file
         run: sudo ls -la main.pdf
 
+      - name: Upload Build to Artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: Diplomarbeit.pdf
+          path: main.pdf
       - name: upload latest Build
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/assets/18584951?name=Diplomarbeit.pdf'
+          upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/24358211/assets?name=Diplomarbeit.pdf'
           asset_path: ./main.pdf
           asset_name: Diplomarbeit.pdf
           asset_content_type: application/pdf
