@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install curl
-          curl -vLJO -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/tags/latest-build'
+          curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/tags/latest-build'
 
       - name: Install dependencies
         run: |
