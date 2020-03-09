@@ -1,0 +1,1 @@
+[download latest](https://github.com/Lukas-Heiligenbrunner/LatexActionTest/releases/download/latest-build/Diplomarbeit.pdf)
