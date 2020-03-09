@@ -33,11 +33,11 @@ jobs:
 
       - name: upload latest Build
         id: upload-release-asset
-          uses: actions/upload-release-asset@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/assets/latest-build'
-            asset_path: ./main.pdf
-            asset_name: Diplomarbeit.pdf
-            asset_content_type: application/pdf
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: 'https://uploads.github.com/repos/Lukas-Heiligenbrunner/LatexActionTest/releases/assets/latest-build'
+          asset_path: ./main.pdf
+          asset_name: Diplomarbeit.pdf
+          asset_content_type: application/pdf
